@@ -174,7 +174,7 @@
                 <div className="well text-center">
                   <h2>{this.props.doneStatus}</h2>
                   <button className="btn btn-default" onClick={this.props.resetGame}>
-                    Play again
+                    Сыграть снова?
                   </button>
                 </div>
               )
@@ -306,7 +306,7 @@
             if (this.state.usedNumbers.length === 9) {
               
               this.setState({
-                doneStatus: "Done. Nice!"
+                doneStatus: "Вы справились!"
               }); 
               return;
             }
@@ -314,7 +314,7 @@
             if (this.state.redraws === 0 && !this.possibleSolution()) {
               
               this.setState({
-                doneStatus: "Game Over!"
+                doneStatus: "Игра окончена!"
               }); 
             }
           },
@@ -344,7 +344,7 @@
             if (this.state.doneStatus === null) {
               
               this.setState({
-                doneStatus: "Time is off!"
+                doneStatus: "Время вышло!"
               });
             }
           },
