@@ -1,0 +1,28 @@
+{
+  "name": "stars",
+  "version": "1.0.0",
+  "description": "Stars game on reactjs",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-react": "^6.22.0"
+  },
+  "scripts": {
+    "build": "babel js -d lib --presets react",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hixel/stars-react-app.git"
+  },
+  "keywords": [
+    "reactjs"
+  ],
+  "author": "Igor Semin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hixel/stars-react-app/issues"
+  },
+  "homepage": "https://github.com/hixel/stars-react-app#readme"
+}
