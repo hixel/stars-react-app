@@ -14,3 +14,19 @@
 
 Время вышло
 ![Скриншот игры](/screens/screen_2.png?raw=true "Скриншот игры")
+***
+
+### Разработка
+```python
+git clone https://github.com/hixel/stars-react-app
+cd stars-react-app
+rm -rf lib
+
+npm install babel-cli --save-dev
+npm install babel-preset-react --save-dev
+```
+
+После изменения кода, необходимо сделать трансформинг jsx -> js командой
+```python
+npm run build
+```
