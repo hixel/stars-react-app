@@ -14,6 +14,11 @@ body {
   float: left;
 }
 
+#stars-frame .glyphicon.glyphicon-star {
+
+  font-size: 40px;
+}
+
 #button-frame {
   
   width: 20%;
