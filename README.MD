@@ -22,8 +22,7 @@ git clone https://github.com/hixel/stars-react-app
 cd stars-react-app
 rm -rf lib
 
-npm install babel-cli --save-dev
-npm install babel-preset-react --save-dev
+npm install
 ```
 
 После изменения кода, необходимо сделать трансформинг jsx -> js командой
