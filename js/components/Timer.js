@@ -5,6 +5,11 @@ var Timer = React.createClass({
     this.props.startTimer();
   },
 
+  componentDidUnmount: function() {
+
+     this.props.stopTimer();
+  },
+
   render: function () {
 
     return (

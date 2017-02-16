@@ -29,7 +29,8 @@ var Game = React.createClass({
       redraws: 5,
       correct: null,
       doneStatus: null,
-      expiration: 60
+      expiration: 60,
+      refreshStarsFrame: true
     };
   },
 
@@ -86,7 +87,8 @@ var Game = React.createClass({
       selectedNumbers: [],
       usedNumbers: usedNumbers,
       correct: null,
-      numberOfStars: this.randomNumber()
+      numberOfStars: this.randomNumber(),
+      refreshStarsFrame: true,
     }, function () {
       this.updateDoneStatus()
     });
@@ -99,7 +101,8 @@ var Game = React.createClass({
         numberOfStars: this.randomNumber(),
         correct: null,
         selectedNumbers: [],
-        redraws: this.state.redraws - 1
+        redraws: this.state.redraws - 1,
+        refreshStarsFrame: true,
       }, function () {
         this.updateDoneStatus()
       });
@@ -146,9 +149,12 @@ var Game = React.createClass({
     var timer = setInterval(function () {
 
         if (me.state.expiration > 0 && me.state.doneStatus === null) {
+
           var expiration = me.state.expiration - 1;
+
           me.setState({
-            expiration: expiration
+            expiration: expiration,
+            refreshStarsFrame: false
           });
         } else {
 
@@ -178,6 +184,7 @@ var Game = React.createClass({
         correct = this.state.correct,
         doneStatus = this.state.doneStatus,
         expiration = this.state.expiration,
+        refreshStarsFrame = this.state.refreshStarsFrame,
         bottomFrame;
 
     if (doneStatus) {
@@ -197,7 +204,8 @@ var Game = React.createClass({
           <hr />
 
           <div className="clearfix">
-            <StarsFrame numberOfStars={numberOfStars} />
+            <StarsFrame numberOfStars={numberOfStars}
+              refreshStarsFrame={refreshStarsFrame} />
             <ButtonFrame selectedNumbers={selectedNumbers}
               correct={correct}
               redraws={redraws}
