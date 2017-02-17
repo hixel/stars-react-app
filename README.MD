@@ -16,10 +16,9 @@
 
 Время вышло
 ![Скриншот игры](/screens/screen_2.png?raw=true "Скриншот игры")
-***
 
-### Запуск
-------
+
+## Запуск
 ```bash
 git clone https://github.com/hixel/stars-react-app
 cd stars-react-app
@@ -33,8 +32,7 @@ open index.html
 start index.html
 ```
 
-### Разработка
-------
+## Разработка
 После изменения кода, необходимо сделать трансформинг jsx -> js командой
 ```bash
 npm run build
