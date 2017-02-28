@@ -24,16 +24,11 @@ git clone https://github.com/hixel/stars-react-app
 cd stars-react-app
 
 npm install
+npm run build
 
 # macos\linux
 open index.html
 
 # windows
 start index.html
-```
-
-## Разработка
-После изменения кода, необходимо сделать трансформинг jsx -> js командой
-```bash
-npm run build
 ```
